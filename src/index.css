@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: #f4f6f9;
+  color: #121a28;
+}
+
+h1, h2, h3, .font-display {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+.font-mono-figures {
+  font-family: 'IBM Plex Mono', ui-monospace, monospace;
+  font-feature-settings: 'tnum' 1;
+}
+
+/* Signature element: a thin gold "ledger rule" used to underline
+   key headings across the app — a small recurring motif tying the
+   brand back to the idea of a ledger / statement line. */
+.ledger-rule {
+  position: relative;
+}
+.ledger-rule::after {
+  content: '';
+  display: block;
+  width: 36px;
+  height: 3px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #c79a3f, #d9b65b);
+  margin-top: 10px;
+}
+
+:focus-visible {
+  outline: 2px solid #c79a3f;
+  outline-offset: 2px;
+}
